@@ -1,5 +1,9 @@
 Router.route('/', {
-  name: 'trending'
+  name: 'home'
+});
+
+Router.route('/journey/:_id', {
+  name: 'journeyDetail'
 });
 
 Router.route('/recent', {
