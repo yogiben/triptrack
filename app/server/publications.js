@@ -1,3 +1,7 @@
+Meteor.publish('myJourneys', function(){
+  return Journeys.find({owner: this.userId});
+});
+
 Meteor.publish('products', function() {
   return Products.find();
 });
