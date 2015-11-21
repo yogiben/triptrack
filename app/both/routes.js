@@ -6,6 +6,11 @@ Router.route('/journey/:_id', {
   name: 'journeyDetail'
 });
 
+Router.route('/journeys', {
+  name: 'journeys'
+});
+
+
 Router.route('/recent', {
   name: 'recent'
 });

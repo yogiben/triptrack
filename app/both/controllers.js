@@ -20,6 +20,8 @@ JourneyDetailController = AppController.extend({
   }
 });
 
+JourneysController = AppController.extend({});
+
 // TrendingController = AppController.extend({});
 //
 // RecentController = AppController.extend({});

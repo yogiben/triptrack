@@ -5,7 +5,6 @@
 
 meteor-platform
 service-configuration
-accounts-meteor-developer
 momentjs:moment
 iron:router@1.0.0
 zimme:iron-router-active
@@ -25,3 +24,7 @@ reactive-var
 coffeescript
 mdg:geolocation
 raix:handlebar-helpers
+useraccounts:core@1.11.1
+useraccounts:ionic@1.11.1
+accounts-password
+accounts-facebook
