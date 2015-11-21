@@ -10,6 +10,11 @@ Router.route('/recent', {
   name: 'recent'
 });
 
+Router.route('/accounts', {
+  name: 'accounts'
+});
+
+
 Router.route('/products/:_id', {
   name: 'products.show'
 });

@@ -23,3 +23,5 @@ meteoric:ionic
 meteoric:autoform-ionic
 reactive-var
 coffeescript
+mdg:geolocation
+raix:handlebar-helpers
