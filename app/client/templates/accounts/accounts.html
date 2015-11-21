@@ -1,0 +1,26 @@
+<template name="accounts">
+  {{#ionView class="template-accounts"}}
+    {{#ionContent}}
+      <div class="text-center">
+        <img id="logo" src="/images/logo.png" alt="">
+      </div>
+      <div class="padding" style="position: absolute; bottom: 0px; width: 100%">
+          <div style="text-align: center">
+            <button data-signup="facebook" class="button button-facebook button-rounded button-transparent button-block icon-left ion-social-facebook">
+              Sign in with Facebook
+            </button>
+            <button data-ion-modal="modalAccounts" data-at-state="signUp" class="button button-signup button-block button-transparent button-rounded">
+              Create a TripTrack account
+            </button>
+            <a data-ion-modal="modalAccounts" data-at-state="signIn">Sign in</a>
+          </div>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>
+
+<template name="modalAccounts">
+  {{#ionModal title="TripTrack"}}
+    {{> atForm}}
+  {{/ionModal}}
+</template>

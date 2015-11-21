@@ -1,9 +1,9 @@
 AutoForm.hooks({
-  'products-new-form': {
+  'journey-new-form': {
     onSuccess: function (operation, result, template) {
       IonModal.close();
       IonKeyboard.close();
-      Router.go('products.show', {_id: result});
+      Router.go('journeyDetail', {_id: result});
     }
   }
 });

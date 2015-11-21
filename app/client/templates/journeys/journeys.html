@@ -1,0 +1,25 @@
+<template name="journeys">
+
+  {{#contentFor "headerButtonLeft"}}
+    <a href="{{pathFor 'profile'}}" class="button button-clear pull-left button-positive">
+      {{> ionIcon icon='ios-person-outline'}}
+    </a>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-ion-modal="newJourney">
+      {{> ionIcon icon='ios-plus-empty'}}
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Home</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <h1>LIST OF JOURNEYS</h1>
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

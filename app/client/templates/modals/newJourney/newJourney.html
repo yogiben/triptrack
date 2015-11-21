@@ -1,0 +1,17 @@
+<template name="newJourney">
+  {{#ionModal customTemplate=true}}
+    {{# autoForm collection="Journeys" id="journey-new-form" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">Cancel</button>
+        <h2 class="title">New Journey</h2>
+        <button type="submit" class="button button-positive button-clear">Create</button>
+      </div>
+      <div class="content has-header overflow-scroll">
+        {{> afQuickField name="departure"}}
+        {{> afQuickField name="destination"}}
+        {{> afQuickField name="company"}}
+        {{> afQuickField name="startTime"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

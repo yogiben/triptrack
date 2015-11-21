@@ -1,10 +1,24 @@
 Router.route('/', {
-  name: 'trending'
+  name: 'home'
 });
+
+Router.route('/journey/:_id', {
+  name: 'journeyDetail'
+});
+
+Router.route('/journeys', {
+  name: 'journeys'
+});
+
 
 Router.route('/recent', {
   name: 'recent'
 });
+
+Router.route('/accounts', {
+  name: 'accounts'
+});
+
 
 Router.route('/products/:_id', {
   name: 'products.show'

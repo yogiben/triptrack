@@ -1,0 +1,34 @@
+.view.template-accounts
+{
+  background-image: url('/images/accounts-background.jpg');
+  background-size: cover;
+
+  #logo
+  {
+    max-width: 100%;
+    margin-top: 7em;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .button
+  {
+    border: none;
+    padding: 3px 10px;
+    &.icon-left:before {
+      float: left;
+      padding-right: .2em;
+      padding-left: 11px;
+    }
+
+    &.button-facebook
+    {
+      background-color: #385391;
+      color: white;
+    }
+    &.button-signup
+    {
+      background-color: #51b4b4;
+      color: white;
+    }
+  }
+}
