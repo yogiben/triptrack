@@ -20,7 +20,13 @@ JourneyDetailController = AppController.extend({
   }
 });
 
-JourneysController = AppController.extend({});
+JourneysController = AppController.extend({
+  data: function(){
+    return {
+      journeys: Journeys.find({owner: Meteor.userId()})
+    }
+  }
+});
 
 // TrendingController = AppController.extend({});
 //

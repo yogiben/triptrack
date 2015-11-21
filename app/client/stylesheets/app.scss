@@ -195,3 +195,23 @@ a.comment-item-author {
     vertical-align: middle;
   }
 }
+
+.bar.bar-stable
+{
+  background-color: #27ae60;
+  color: white;
+  .title {
+    color: white;
+  }
+  a {
+    color: white !important;
+  }
+}
+
+.tab-item-positive
+{
+  color: #404040 !important;
+}
+a {
+  text-decoration: none;  
+}

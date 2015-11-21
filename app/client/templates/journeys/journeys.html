@@ -18,8 +18,30 @@
 
   {{#ionView}}
     {{#ionContent}}
-      <h1>LIST OF JOURNEYS</h1>
+    {{#ionList}}
+      {{#each journeys}}
+        <a href="{{pathFor 'journeyDetail' _id=_id}}">
+          {{#ionItem iconLeft=true iconRight=true avatar=true class="my-class" buttonRight=true}}
+          {{> journey}}
+          {{/ionItem}}
+        </a>
+        {{else}}
+        <div class="empty-view">
+          {{> ionIcon icon="android-train"}}
+          No notifications yet!
+        </div>
+      {{/each}}
+    {{/ionList}}
     {{/ionContent}}
   {{/ionView}}
 
+</template>
+
+<template name="journey">
+  {{> ionIcon icon="android-train" }}
+  <strong>{{departure}}</strong> to <strong>{{destination}}</strong>
+  <br>
+  145 miles
+
+  {{> ionIcon icon="ios-play-outline"}}
 </template>
