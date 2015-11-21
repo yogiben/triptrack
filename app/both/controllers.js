@@ -12,7 +12,13 @@ AppController = RouteController.extend({
   }
 });
 
-HomeController = AppController.extend({});
+HomeController = AppController.extend({
+  data: function(){
+    return {
+      journeys: Journeys.find({owner: Meteor.userId()}, {sort: {createdAt: -1}})
+    }
+  }
+});
 
 JourneyDetailController = AppController.extend({
   data: function(){

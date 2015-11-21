@@ -18,13 +18,47 @@
 
   {{#ionView}}
     {{#ionContent}}
-      From: {{departure}}
-      <br>
-      From: {{destination}}
-      <br>
-      STATISTICS
-      <br>
-      MAP
+
+    <div class="list card">
+      <div class="item iconLeft=true">
+        <h2>{{departure}} to {{destination}}</h2>
+        <p>{{prettyDate startTime}}</p>
+      </div>
+
+      <div class="item">
+        {{#ionList class="my-class"}}
+          {{#ionItem iconLeft=true}}
+            {{> ionIcon icon="map"}}
+            118 miles
+          {{/ionItem}}
+
+          {{#ionItem iconLeft=true}}
+            {{> ionIcon icon="ios-time-outline"}}
+            2 h 9 min <span class="subdued">(10 minutes total delay)</span>
+          {{/ionItem}}
+        {{/ionList}}
+      </div>
+
+      <div class="item">
+        <img style="max-width: 100%;" src="/images/stock/example-card.png" alt="" />
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-social-facebook"></i>
+          Comment
+          <div class="item">
+            <h2>Welcome to TripTrack</h2>
+            <p>A HackTrain 2.0 project</p>
+          </div>
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-social-twitter"></i>
+          Share
+        </a>
+      </div>
+
+      </div>
 
     {{/ionContent}}
   {{/ionView}}

@@ -4,6 +4,10 @@ AutoForm.hooks({
       IonModal.close();
       IonKeyboard.close();
       Router.go('journeyDetail', {_id: result});
+
+      if (Journeys.find().count() == 1){
+        Badge.new('gwr');
+      }
     }
   }
 });

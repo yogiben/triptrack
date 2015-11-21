@@ -1,9 +1,9 @@
 <template name="home">
 
   {{#contentFor "headerButtonLeft"}}
-    <a href="{{pathFor 'profile'}}" class="button button-clear pull-left button-positive">
+    <!-- <a href="{{pathFor 'profile'}}" class="button button-clear pull-left button-positive">
       {{> ionIcon icon='ios-person-outline'}}
-    </a>
+    </a> -->
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
@@ -18,9 +18,64 @@
 
   {{#ionView}}
     {{#ionContent}}
-      <h1>PROFILE</h1>
-      <br>
-      <h1>Recent journeys</h1>
+      {{#with User}}
+      {{> _profileHeader}}
+      {{/with}}
+
+  {{#unless journeys.count}}
+  <div class="list card">
+
+  <div class="item">
+    <h2>Welcome to TripTrack</h2>
+    <p>A HackTrain 2.0 project</p>
+  </div>
+
+  <div class="item item-body">
+    <p>TripTrack is an app that <strong>makes train travel fun</strong> </p>
+    <!-- <img class="full-image" src="/images/sunset.jpg"> -->
+    <button class="button button-block button-balanced" data-ion-modal="newJourney"> Add a journey</button>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-facebook"></i>
+      Comment
+      <div class="item">
+        <h2>Welcome to TripTrack</h2>
+        <p>A HackTrain 2.0 project</p>
+      </div>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-twitter"></i>
+      Share
+    </a>
+  </div>
+
+</div>
+{{else}}
+<div class="padding">
+  <button class="button button-block button-balanced" data-ion-modal="newJourney"> Add a journey</button>
+</div>
+{{/unless}}
+
+      {{#if journeys.count}}
+        <h4 class="padding">Recent Journeys</h4>
+        {{#ionList class="card"}}
+          {{#each journeys}}
+            <a href="{{pathFor 'journeyDetail' _id=_id}}">
+              {{#ionItem iconLeft=true iconRight=true avatar=true class="my-class" buttonRight=true}}
+              {{> journey}}
+              {{/ionItem}}
+            </a>
+          {{/each}}
+        {{/ionList}}
+      {{else}}
+        <div class="empty-view">
+          {{> ionIcon icon="android-train"}}
+          No journeys yet!
+        </div>
+      {{/if}}
+
     {{/ionContent}}
   {{/ionView}}
 

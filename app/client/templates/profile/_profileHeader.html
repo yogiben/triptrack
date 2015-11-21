@@ -1,12 +1,18 @@
 <template name="_profileHeader">
   <div class="profile-header">
     {{> avatar user=this size="large" shape="circle"}}
-    <h3>{{ profile.name }}</h3>
-    <p>
-      <a href="https://atmospherejs.com/{{profile.name}}" target="_blank">
-        <img src="/images/atmosphere-icon.png" width=32 height=32 class="positive" />
-        atmospherejs.com/{{profile.name}}
-      </a>
-    </p>
+    <h2 style="color:white;"> Ben Jones</h2>
+    <p>Level 1: Trainee</p>
+
+    <div class="row stats text-center">
+      <div class="col">
+        <h2>{{$.Session.get 'myJourneys'}}</h2>
+        journeys
+      </div>
+      <div class="col">
+        <h2>{{$.Session.get 'myDistance'}}</h2>
+        miles
+      </div>
+    </div>
   </div>
 </template>
