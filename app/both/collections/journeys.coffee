@@ -5,6 +5,8 @@ Journeys.attachSchema new SimpleSchema
     type: String
   destination:
     type: String
+    autoform:
+      options: Journeys
   company:
     type: String
   startTime:

@@ -7,9 +7,9 @@
         <button type="submit" class="button button-positive button-clear">Create</button>
       </div>
       <div class="content has-header overflow-scroll">
-        {{> afQuickField name="departure"}}
-        {{> afQuickField name="destination"}}
-        {{> afQuickField name="company"}}
+        {{> afQuickField name="departure" options=stations}}
+        {{> afQuickField name="destination" options=stations}}
+        {{> afQuickField name="company" options=companies}}
         {{> afQuickField name="startTime"}}
       </div>
     {{/autoForm}}
